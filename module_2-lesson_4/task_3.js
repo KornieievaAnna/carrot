@@ -35,7 +35,7 @@ function getRectArea(dimensions) {
 
 
   for (let i = 0; i < dimensionsArea.length; i += 1){   // на кожній ітерації приводимо  кожен елемент до числа  
-    sides.push(Number(dimensionsArea[i]))               // додаємо елемент в новий пустий масив 
+    sides.push(Number(dimensionsArea[i]))               // додаємо елемент  старого масиву рядка який приведений до числа  в новий пустий масив 
 }
   let square = sides[0]* sides[1]                   // множимо значення першого індексу на другий 
 
