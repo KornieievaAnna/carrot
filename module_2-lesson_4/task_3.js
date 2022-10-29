@@ -1,33 +1,27 @@
 
-//  Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами, 
+//  Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами,
 // значення яких будуть передані до параметра dimensions у вигляді рядки.
 // Значення гарантовано розділені пробілом.
 
 function getRectArea(dimensions) {
-  // const sidesNumber = Number.parseInt(dimensions);
   const sides = dimensions.split(" ")
-  let RectArea = sides[0] * sides[1]
-  console.log(RectArea)
+  const sideA = Number(sides[0])
+  const sideB = Number(sides[1])
+  let RectArea = sideA * sideB
+
   
 
 
 
-  console.log(typeof sides, RectArea)
-  console.log(  sides [0] ,typeof  sides [0],   sides [1] ,typeof  sides [1] )
+  console.log( sideA,typeof sideA , sideB, typeof  sideB )
  
+  console.log( `${sides} square: ${RectArea}`)
  }
-  
- 
- 
-
-
-
-
-
-
-
-
 
 getRectArea('8 11')
      
 getRectArea('10 13')
+
+
+
+
