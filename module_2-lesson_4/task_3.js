@@ -4,10 +4,10 @@
 // Значення гарантовано розділені пробілом.
 
 function getRectArea(dimensions) {
-  const sides = dimensions.split(" ")     //створюємо масив 
-  const sideA = Number(sides[0])         //приводимо кожен індекс до числа */
+  const sides = dimensions.split(" ")     //створюємо масив  з рядками 
+  const sideA = Number(sides[0])         //приводимо кожне значення  індексу до числа */
   const sideB = Number(sides[1])
-  let RectArea = sideA * sideB            // множим перший індекс на другий
+  let RectArea = sideA * sideB            // множим перший значення  індексу  на друге
 
   
   return RectArea                          // повертаєм значення в функцію 
