@@ -4,24 +4,47 @@
 // Значення гарантовано розділені пробілом.
 
 function getRectArea(dimensions) {
-  const sides = dimensions.split(" ")
-  const sideA = Number(sides[0])
+  const sides = dimensions.split(" ")     //створюємо масив 
+  const sideA = Number(sides[0])         //приводимо кожен індекс до числа */
   const sideB = Number(sides[1])
-  let RectArea = sideA * sideB
+  let RectArea = sideA * sideB            // множим перший індекс на другий
 
   
-
-
-
-  console.log( sideA,typeof sideA , sideB, typeof  sideB )
- 
-  console.log( `${sides} square: ${RectArea}`)
+  return RectArea                          // повертаєм значення в функцію 
  }
 
-getRectArea('8 11')
-     
-getRectArea('10 13')
+let square1 = getRectArea('8 11')           //створюємо змінну яка буде дорівнювати значенню функції
+let square2 = getRectArea('10 13')
+console.log(`площа: ${square1}` )           //вивидимо змінну в консоль 
+console.log(`площа: ${square2}` )  
 
 
 
 
+
+
+
+
+
+
+// Другий спосіб 
+
+function getRectArea(dimensions) {
+  let dimensionsArea = dimensions.split(" ")        // створюємо новий  пустий масив 
+  let sides = []
+
+
+  for (let i = 0; i < dimensionsArea.length; i += 1){   // на кожній ітерації приводимо  кожен елемент до числа  
+    sides.push(Number(dimensionsArea[i]))               // додаємо елемент в новий пустий масив 
+}
+  let square = sides[0]* sides[1]                   // множимо значення першого індексу на другий 
+
+  return square
+   
+}
+
+
+let Areasquare1 = getRectArea('8 11')
+let Areasquare2 = getRectArea('20 11')
+console.log( `Загальна площа: ${Areasquare1}`)
+console.log(   `Загальна площа: ${Areasquare2}`)
