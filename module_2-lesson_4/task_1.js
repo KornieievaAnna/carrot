@@ -5,29 +5,31 @@
 // Індекс маси тіла необхідно округлити до однієї цифри після коми;
 
 
-const userWeight = prompt('введіть вашу вагу в кг');
-const userHeight = prompt('введіть ваш зріст в м');
+const userWeight = Number(prompt('введіть вашу вагу в кг'));
+const userHeight = Number(prompt('введіть ваш зріст в м'));
 
 function weightIndex (weight, height) {
     const heightPow = Math.pow(height, 2);
-const indexResult = weight / heightPow  ;
- 
-    return indexResult.toFixed(1);
+const indexResult =  weight / heightPow;
+    // console.log(indexResult)
+    // console.log(typeof userWeight)
+    // console.log(typeof userHeight)
 
- 
+    return indexResult.toFixed(1);
 } 
 
-const userIndexResult = weightIndex(weight, height);
 
-console.log(userIndexResult)
-
+let userIndex = weightIndex (userWeight, userHeight) 
 
 
-
+console.log(userIndex)
 
 
 
 
 
 
-// calcBMI(53, 1.55)
+
+
+
+
