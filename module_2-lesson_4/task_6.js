@@ -12,12 +12,12 @@ function findLargestNumber(numbers) {
     for (let i = 0; i < numbers.length; i += 1)    // перебираєм масив якщо наступне знвачення більше перезаписуєм значення в змінній 
         if (numbers[i] > LargestNumber) {
             LargestNumber = numbers[i]
-          
+        
         }
         return LargestNumber                
 }
 
-let LargestNumber1 = findLargestNumber([2, 17, 94, 1, 23, 37])
+let LargestNumber1 = findLargestNumber([2, 17, 1, 23, 37,94])
 let LargestNumber2 = findLargestNumber([49, 4, 7, 83, 12])
 
 
