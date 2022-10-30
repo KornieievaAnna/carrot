@@ -16,8 +16,8 @@ function formatTime(minutes) {
     console.log( hoursTotal);
     console.log( minutesTotal);
 
-    const digitalHoursTotal = String(hoursTotal)
-    const digitalMinutesTotal = String(minutesTotal)
+    const digitalHoursTotal = String(hoursTotal).padStart(2,0)
+    const digitalMinutesTotal = String(minutesTotal).padStart(2,0)
     console.log(digitalHoursTotal);
     console.log(digitalMinutesTotal);
     
