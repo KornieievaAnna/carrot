@@ -13,7 +13,6 @@ function calAverage( ) {
     }
     console.log(numbersArray)
 
-
     for (let i = 0; i < numbersArray.length; i += 1){
         total += numbersArray [i]
     }
@@ -23,11 +22,14 @@ function calAverage( ) {
     console.log(result)
     return   result
  }
+  let average1 = calAverage(1, 2, 3, 4)
+  let average2 = calAverage(14, 8, 2);
+  let average3 = calAverage(27, 43, 2, 8, 36)
 
 
-calAverage(1, 2, 3, 4);// 2.5
-calAverage((14, 8, 2));// 8
-calAverage((27, 43, 2, 8, 36)); // 23.2
+console.log(`середнє ${average1}`) 
+console.log(`середнє ${average2}`) 
+console.log(`середнє ${average3}`) 
 
 
 
