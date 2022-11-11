@@ -4,32 +4,19 @@
 
 // Індекс маси тіла необхідно округлити до однієї цифри після коми;
 
+const userWeight = Number(prompt("введіть вашу вагу в кг"));
+const userHeight = Number(prompt("введіть ваш зріст в м"));
 
-const userWeight = Number(prompt('введіть вашу вагу в кг'));
-const userHeight = Number(prompt('введіть ваш зріст в м'));
+function weightIndex(weight, height) {
+  const heightPow = Math.pow(height, 2);
+  const indexResult = weight / heightPow;
+  // console.log(indexResult)
+  // console.log(typeof userWeight)
+  // console.log(typeof userHeight)
 
-function weightIndex (weight, height) {
-    const heightPow = Math.pow(height, 2);
-const indexResult =  weight / heightPow;
-    // console.log(indexResult)
-    // console.log(typeof userWeight)
-    // console.log(typeof userHeight)
+  return indexResult.toFixed(1);
+}
 
-    return indexResult.toFixed(1);
-} 
+let userIndex = weightIndex(userWeight, userHeight);
 
-
-let userIndex = weightIndex (userWeight, userHeight) 
-
-
-console.log(userIndex)
-
-
-
-
-
-
-
-
-
-
+console.log(userIndex);
