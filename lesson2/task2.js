@@ -4,16 +4,6 @@ const stones = [
     { name: "Сапфір", price: 400, quantity: 7 },
     { name: "Щебінь", price: 150, quantity: 100 },
   ];
-  
-
-
-
- const totalPrice = stones.reduce((total,{price,quantity}) => {
-    total += price * quantity
-    return total
- }, 0) 
- console.log(totalPrice)
-
-
-
- 
+  const min = 10000
+  const chosenarray = stones.filter(stone=>stone.price*stone.quantity>min)
+console.log(chosenarray);
