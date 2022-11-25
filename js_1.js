@@ -1,34 +1,30 @@
-//Напиши класс Клієнт, який створює об'єкт
-//з властивостями login і email для входу
-//Оголоси приватні властивостей #login #email (або _login _email),
-//доступ до читання і зміни яких зроблено через геттер і сеттер
+//Напишіть функцію конструктора (або клас) Student для створення користувача з такими властивостями
+// name -  стрічка
+// faculty - стрічка
+//Додайте метод getInfo(), який повертає рядок:
+//`Студент [ім`я] вчиться на факультеті [факультет]`
+// Створіть студентів:
+// Harry Potter Gryffindor
+// Draco Malfoy Slytherin
 
-class Client {
-  #login;
-  #email;
 
-  constructor({ login, email }) {
-    this.#login = login;
-    this.#email = email;
-  }
+class Student {
+   constructor(fullname, faculty) {
+      this.fullname = fullname;
+      this.faculty = faculty;
+   }
 
-  get login() {
-    return this.#login;
-  }
-  set login(newLogin) {
-    this.#login = newLogin;
-  }
-
-  get email() {
-    return this.#email;
-  }
-
-  set email(newEmail) {
-    this.#email = newEmail;
-  }
+   getInfo() {
+      return `Студент ${this.fullname} вчиться на факультеті ${this.faculty}`
+   }
 }
 
-const Mango = new Client({ login: 'Mango', email: 'mango.gmail.com' });
-// console.log(Mango.login);
-Mango.login = 'Banana';
-console.log(Mango.login);
+const Harry = new Student('Harry Potter', 'Gryffindor');
+const Draco = new Student('Draco Malfoy', 'Slytherin');
+
+console.log(Harry.getInfo());
+console.log(Draco.getInfo());
+
+// Student.__proto__ === Function.prototype
+
+// Harry.__proto__ ==== Student.prototype
