@@ -14,10 +14,8 @@ const stones = [
 let 
 const quantityUp = stones.forEach(stone => stone.quantity + 10)
 
-<<<<<<< HEAD
 console.log(quantityUp)
 console.log(stone.quantity)
-=======
 
  const totalPrice = stones.reduce((total,{price,quantity}) => {
     total += price * quantity
@@ -28,4 +26,3 @@ console.log(stone.quantity)
 
 
  
->>>>>>> c75e320536b88595c0014b3df364ba2b554f86ab
