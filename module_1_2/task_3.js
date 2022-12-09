@@ -18,4 +18,4 @@ do {
     flag = false;
     alert(`Загальна сума введених чисел дорівнює ${total}.`);
   }
-} while (flag);
+} while (flag)
