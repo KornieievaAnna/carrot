@@ -5,8 +5,22 @@
  * 
  */
 
-// const startTimer = (arr) => {
-  
-// }
+const startTimer = (arr) => {
+    let index = 0;
+    let isReversed = false;
+    const timerId = setInterval(() => {
+        console.log(arr[index]);
+        if (index === arr.length-1 && !isReversed) {
+            arr.reverse(); 
+            isReversed = true;
+            index = 0;
+        }
+        if (index === arr.length - 1 && isReversed) {
+            clearInterval(timerId);
+        }
+        index += 1;
 
-//  startTimer(["a", "b", "c", "d", "e", "f"]);
+  }, 1000);
+}
+
+ startTimer(["a", "b", "c", "d", "e", "f"]);
