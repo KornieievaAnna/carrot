@@ -15,7 +15,7 @@ const renderProducts = async () => {
   console.log(result);
 };
 
-// renderProducts();
+renderProducts();
 
 // Завдання 2
 // const form = document.querySelector('#singleProductForm');
