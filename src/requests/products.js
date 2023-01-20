@@ -5,7 +5,11 @@ import apiInstance from '../services/api.js';
 const getProducts = async () => {
 }
 
-const getProductById = async () => {
+const getProductById = async (id) => {
+    const resp = await apiInstance.get(`/products/${id}`)
+    console.log(resp.data)
+    return resp.data;
+    
 }
 
 const getCategories = async () => {

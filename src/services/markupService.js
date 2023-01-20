@@ -2,8 +2,12 @@ const renderProductsMarkup = () => {
 
 }
 
-const renderProductByIdMarkup = () => {
+const renderProductByIdMarkup = ({ title, description }) => {
+    const markup = `<h2>${title}</h2><p>${description}</p>`
+  
 
+    const div = document.querySelector('#singleProduct');
+    div.innerHTML = markup;
 }
 
 

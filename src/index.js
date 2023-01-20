@@ -15,6 +15,18 @@ const renderProducts = async () => {
 
 
 // Завдання 2
+const form = document.querySelector('#singleProductForm');
+const renderProductById = async (event) => {
+    event.preventDefault()
+    const id = event.target.elements[0].value;
+    const product = await productsApi.getProductById(id);
+    renderService.renderProductByIdMarkup(product);
+
+    console.log(id);
+    
+}
+
+form.addEventListener('submit', renderProductById);
 
 
 // Завдання 3
