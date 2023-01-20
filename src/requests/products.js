@@ -7,17 +7,21 @@ const getProducts = async () => {
   return resp.data.products;
 };
 
-
 const getProductById = async (id) => {
-    const resp = await apiInstance.get(`/products/${id}`)
-    console.log(resp.data)
-    return resp.data;
-    
-}
-const createProduct = async (product) => { 
-    const resp = await apiInstance.post('/products/add', product);
-    console.log(resp)
+  const resp = await apiInstance.get(`/products/${id}`);
+  console.log(resp.data);
+  return resp.data;
 };
+const createProduct = async (product) => {
+  const resp = await apiInstance.post("/products/add", product);
+  console.log(resp);
+};
+
+const deleteProductById = async (id) => {
+  const resp = await apiInstance.delete(`/products/${id}`);
+  return resp.data;
+};
+
 const getCategories = async () => {};
 
 const searchProductsByCategory = async () => {};
@@ -33,7 +37,7 @@ const deleteProduct = async () => {};
 
 export default {
   getProducts,
-    getProductById,
+  getProductById,
   createProduct,
   searchProductsByCategory,
   filterProducts,
@@ -42,4 +46,5 @@ export default {
   addProduct,
   updateProduct,
   deleteProduct,
+  deleteProductById,
 };

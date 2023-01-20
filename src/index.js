@@ -26,14 +26,14 @@ const renderProducts = async () => {
 //     renderService.renderProductByIdMarkup(product);
 
 //     console.log(id);
-    
+
 // }
 
 // form.addEventListener('submit', renderProductById);
 
 // Завдання 3
-const form = document.querySelector('#form');
-form.addEventListener('submit', createProduct);
+const form = document.querySelector("#form");
+form.addEventListener("submit", createProduct);
 
 function createProduct(event) {
   event.preventDefault();
@@ -41,12 +41,28 @@ function createProduct(event) {
   const product = {
     description: description.value,
     price: price.value,
-    title: title.value
-  }
+    title: title.value,
+  };
   productsApi.createProduct(product);
 }
 
 // Завдання 4
+const deleteForm = document.querySelector("#deletionProductForm");
+deleteForm.addEventListener("submit", onDelete);
+
+async function onDelete(event) {
+  event.preventDefault();
+  const { deletionId } = event.target.elements;
+  const id = deletionId.value;
+  console.log(id);
+  const response = await productsApi.deleteProductById(id);
+  console.log(response);
+  if (!response.isDeleted) {
+    alert("error");
+  } else {
+    alert("sucsess");
+  }
+}
 
 // Завдання 5
 
