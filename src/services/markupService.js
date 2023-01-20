@@ -8,17 +8,16 @@ const renderProductsMarkup = (products) => {
     )
     .join("");
 
-
-}
+  const list = document.querySelector("#allProducts");
+  list.insertAdjacentHTML("beforeend", markup);
+};
 
 const renderProductByIdMarkup = ({ title, description }) => {
-    const markup = `<h2>${title}</h2><p>${description}</p>`
-  
+  const markup = `<h2>${title}</h2><p>${description}</p>`;
 
-    const div = document.querySelector('#singleProduct');
-    div.innerHTML = markup;
-}
-
+  const div = document.querySelector("#singleProduct");
+  div.innerHTML = markup;
+};
 
 export default {
   renderProductsMarkup,
