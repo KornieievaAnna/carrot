@@ -1,18 +1,21 @@
-import './styles/normalize.css';
-import './styles/index.css';
+import "./styles/normalize.css";
+import "./styles/index.css";
 
-import productsApi from './requests/products';
-import usersApi from './requests/users';
-import postsApi from './requests/posts';
+import productsApi from "./requests/products";
+import usersApi from "./requests/users";
+import postsApi from "./requests/posts";
 
-import renderService from './services/markupService';
+import renderService from "./services/markupService";
 
 // Завдання 1
 const renderProducts = async () => {
-}
+  const result = await productsApi.getProducts();
+
+  renderService.renderProductsMarkup(result);
+  console.log(result);
+};
 
 // renderProducts();
-
 
 // Завдання 2
 const form = document.querySelector('#singleProductForm');
@@ -28,16 +31,11 @@ const renderProductById = async (event) => {
 
 form.addEventListener('submit', renderProductById);
 
-
 // Завдання 3
-
 
 // Завдання 4
 
-
 // Завдання 5
-
-
 
 // productsApi.searchProductsByCategory('smartphones');
 // productsApi.filterProducts(5, 10, ['title', 'price']);
