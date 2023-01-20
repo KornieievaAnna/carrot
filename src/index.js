@@ -18,20 +18,33 @@ const renderProducts = async () => {
 // renderProducts();
 
 // Завдання 2
-const form = document.querySelector('#singleProductForm');
-const renderProductById = async (event) => {
-    event.preventDefault()
-    const id = event.target.elements[0].value;
-    const product = await productsApi.getProductById(id);
-    renderService.renderProductByIdMarkup(product);
+// const form = document.querySelector('#singleProductForm');
+// const renderProductById = async (event) => {
+//     event.preventDefault()
+//     const id = event.target.elements[0].value;
+//     const product = await productsApi.getProductById(id);
+//     renderService.renderProductByIdMarkup(product);
 
-    console.log(id);
+//     console.log(id);
     
-}
+// }
 
-form.addEventListener('submit', renderProductById);
+// form.addEventListener('submit', renderProductById);
 
 // Завдання 3
+const form = document.querySelector('#form');
+form.addEventListener('submit', createProduct);
+
+function createProduct(event) {
+  event.preventDefault();
+  const { description, price, title } = event.target.elements;
+  const product = {
+    description: description.value,
+    price: price.value,
+    title: title.value
+  }
+  productsApi.createProduct(product);
+}
 
 // Завдання 4
 

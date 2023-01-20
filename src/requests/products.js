@@ -14,7 +14,10 @@ const getProductById = async (id) => {
     return resp.data;
     
 }
-
+const createProduct = async (product) => { 
+    const resp = await apiInstance.post('/products/add', product);
+    console.log(resp)
+};
 const getCategories = async () => {};
 
 const searchProductsByCategory = async () => {};
@@ -30,7 +33,8 @@ const deleteProduct = async () => {};
 
 export default {
   getProducts,
-  getProductById,
+    getProductById,
+  createProduct,
   searchProductsByCategory,
   filterProducts,
   getCategories,
